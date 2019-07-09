@@ -1,0 +1,36 @@
+.PersonalDetails {
+  margin: 5% 0;
+  padding: 20px;
+  background-color: white;
+  height: 110%;
+  border-radius: 15px;
+}
+
+.User {
+  color: rgb(51, 51, 204);
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #888;
+  padding: 0.5em 0.6em;
+  margin-right: 2%;
+}
+
+.CurrentRole {
+  padding: 10px
+}
+
+.Briefcase {
+  margin-right: 2%;
+}
+
+.Education {
+  padding: 10px;
+}
+
+.GraduationCap {
+  margin-right: 2%;
+}
+
+.Experience {
+  padding: 2%;
+}
