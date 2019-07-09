@@ -15,28 +15,11 @@
   margin-right: 2%;
 }
 
-.CurrentRole {
+.Details {
   padding: 10px
 }
 
-.Briefcase {
+.Icon {
   margin-right: 2%;
-  color: rgb(153, 153, 102);
-}
-
-.Education {
-  padding: 10px;
-}
-
-.GraduationCap {
-  margin-right: 2%;
-  color: rgb(153, 153, 102);
-}
-
-.Experience {
-  padding: 2%;
-}
-
-.Clock {
   color: rgb(153, 153, 102);
 }

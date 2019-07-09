@@ -8,11 +8,11 @@ const personalDetails = (props) => (
   <div className={classes.PersonalDetails}>
     <h3><FontAwesomeIcon icon={faUser} className={classes.User} />
     {props.details.firstName} {props.details.lastName}</h3>
-    <div className={classes.CurrentRole} ><FontAwesomeIcon icon={faBriefcase} className={classes.Briefcase} />
+    <div className={classes.Details} ><FontAwesomeIcon icon={faBriefcase} className={classes.Icon} />
       {props.details.currentRole}</div>
-    <div className={classes.Education} ><FontAwesomeIcon icon={faGraduationCap} className={classes.GraduationCap} />
+    <div className={classes.Details} ><FontAwesomeIcon icon={faGraduationCap} className={classes.Icon} />
       {props.details.education}</div>
-    <div className={classes.Education}><FontAwesomeIcon icon={faClock} className={classes.GraduationCap} />
+    <div className={classes.Details}><FontAwesomeIcon icon={faClock} className={classes.Icon} />
       {props.details.experience}</div>
   </div>
 );
