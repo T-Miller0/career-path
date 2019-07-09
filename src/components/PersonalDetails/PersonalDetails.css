@@ -21,6 +21,7 @@
 
 .Briefcase {
   margin-right: 2%;
+  color: rgb(153, 153, 102);
 }
 
 .Education {
@@ -29,8 +30,13 @@
 
 .GraduationCap {
   margin-right: 2%;
+  color: rgb(153, 153, 102);
 }
 
 .Experience {
   padding: 2%;
+}
+
+.Clock {
+  color: rgb(153, 153, 102);
 }

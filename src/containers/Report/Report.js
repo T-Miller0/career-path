@@ -13,7 +13,7 @@ class Store extends Component {
         <h1>{reportData.firstName}'s career path</h1>
         <PersonalDetails
           details={reportData}/>
-        <div>Short Term Goal</div>
+        <h1>Your short-term goal</h1>
         <div>Long Term Goal</div>
       </div>
     )
