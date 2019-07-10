@@ -11,6 +11,11 @@ I would like my details to be displayed
 As a User
 I would like my short-term goal details to be displayed
 
+As a User
+I would like to know the three most demand skills for the role
+
+As a user I would like to see the discriptions for those particular skills
+
 ## Getting Started
 
 1. Fork this repository.

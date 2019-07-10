@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFlag, faChartLine, faDollarSign, faClock } from '@fortawesome/free-solid-svg-icons'
 
 import classes from './ShortTermGoal.css';
+import SkillsForRole from './SkillsForRole';
 
 const shortTermGoal = (props) => (
   <div className={classes.ShortTermGoal}>
@@ -21,6 +22,8 @@ const shortTermGoal = (props) => (
     <div className={classes.Experience}>
       <FontAwesomeIcon icon={faClock} className={classes.Clock} />
       {props.details.details.experienceYears} years experience</div>
+      <SkillsForRole
+        skillsForRole={props.skillsForRole}/>
   </div>
 );
 
