@@ -26,7 +26,8 @@ const longTermGoal = (props) => (
     </div>
     <h3>Programs that will help you to become a {props.details.name}</h3>
     <Programs
-      programs={props.programs} />
+      programs={props.programs}
+      percentageCoverage={props.percentageCoverage}/>
   </div>
 );
 

@@ -12,7 +12,7 @@ export class Store extends Component {
   //   toggleDescription: false
   // }
 
-  salaryDifference = (salary, desiredSalary) => {
+  differenceInPercentage = (salary, desiredSalary) => {
     let percentage = (1 - (salary / desiredSalary)) * 100
 
     return percentage.toFixed(0)
@@ -47,6 +47,29 @@ export class Store extends Component {
     return nameArray
   }
 
+  titleOfSkills = (skillList) => {
+    const nameArray = []
+
+    for (var i = 0; i < skillList.length; i++) {
+      nameArray.push(skillList[i].Title)
+    }
+    return nameArray
+  }
+
+  skillsCovered = (selectedSkills, requiredSkills) => {
+    const numbOfRequiredSkills = requiredSkills.length
+
+    for (var i = 0; i < requiredSkills.length; i++) {
+      for (var j = 0; j < selectedSkills.length; j++)
+        if (requiredSkills[i].name === selectedSkills[j]) {
+          requiredSkills.splice(i, 1)
+        }
+      const numbOfSkillsLeft = requiredSkills.length
+
+      return this.differenceInPercentage(numbOfRequiredSkills, numbOfSkillsLeft)
+    }
+  }
+
   // showDescriptionHandler = () => {
   //   const doesShow = this.state.toggleDescription
   //   this.setState({toggleDescription: !doesShow})
@@ -57,13 +80,15 @@ export class Store extends Component {
 
     const shortTermDesiredSkills = this.mostDesiredSkills(reportData.careerPath[0].selectedSkills, reportData.careerPath[0].details.allSkills)
     const shortTermDesiredSkillsNames = this.namesOfSkills(shortTermDesiredSkills).splice(3);
-    const shortTermDiference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[0].details.meanSalary)
+    const shortTermDiference = this.differenceInPercentage(reportData.currentRoleDetails.salaryMean, reportData.careerPath[0].details.meanSalary)
 
-    const longTermDiference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[1].details.salaryMean)
+    const longTermDiference = this.differenceInPercentage(reportData.currentRoleDetails.salaryMean, reportData.careerPath[1].details.salaryMean)
     const longTermDesiredSkills = this.mostDesiredSkills(reportData.careerPath[1].selectedSkills, reportData.careerPath[1].details.allSkills)
     const longTermSkillsList = this.namesOfSkills(longTermDesiredSkills)
 
-    console.log(reportData.programs);
+
+    const firstProgramSkills = this.titleOfSkills(reportData.programs[0].CoveredSkills);
+    const percentageOfFirstProgramSkills = this.skillsCovered(reportData.careerPath[1].selectedSkills, firstProgramSkills)
 
     return (
       <div>
@@ -81,7 +106,7 @@ export class Store extends Component {
           details={reportData.careerPath[1]}
           salaryPercentage={longTermDiference}
           skillsList={longTermSkillsList}
-          programs={reportData.programs}/>
+          programs={reportData.programs} />
       </div>
     )
   }
