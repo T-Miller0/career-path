@@ -24,8 +24,8 @@ const skillsForRole = (props) => (
     </div>
     <div>
       <h2>Other skills typically needed for this role</h2>
-      {props.restOfSkills.map(skill => (
-        <div>{skill}</div>
+      {props.restOfSkills.map((skill, index) => (
+        <li key={index}>{skill}</li>
       ))}
     </div>
 
