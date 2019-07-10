@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFire } from '@fortawesome/free-solid-svg-icons'
 
 import classes from './SkillsForRole.css';
+import ListOfSkills from './ListOfSkills/ListOfSkills';
 
 const skillsForRole = (props) => (
   <div>
@@ -24,9 +25,8 @@ const skillsForRole = (props) => (
     </div>
     <div>
       <h2>Other skills typically needed for this role</h2>
-      {props.restOfSkills.map((skill, index) => (
-        <li key={index}>{skill}</li>
-      ))}
+      <ListOfSkills
+        skillsList={props.restOfSkills}/>
     </div>
 
   </div>
