@@ -37,6 +37,15 @@ export class Store extends Component {
     return sortedArray
   }
 
+  namesOfSkills = (skillList) => {
+    const nameArray = []
+
+    for (var i = 0; i < skillList.length; i++) {
+      nameArray.push(skillList[i].name)
+    }
+    return nameArray
+  }
+
   // showDescriptionHandler = () => {
   //   const doesShow = this.state.toggleDescription
   //   this.setState({toggleDescription: !doesShow})
@@ -46,6 +55,7 @@ export class Store extends Component {
   render () {
 
     const shortTermDesiredSkills = this.mostDesiredSkills(reportData.careerPath[0].selectedSkills, reportData.careerPath[0].details.allSkills)
+    const shortTermDesiredSkillsNames = this.namesOfSkills(shortTermDesiredSkills).splice(3);
 
     const diference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[0].details.meanSalary)
     return (
@@ -57,7 +67,8 @@ export class Store extends Component {
         <ShortTermGoal
           details={reportData.careerPath[0]}
           salaryPercentage={diference }
-          skillsForRole={shortTermDesiredSkills}/>
+          skillsForRole={shortTermDesiredSkills}
+          restOfSkills={shortTermDesiredSkillsNames}/>
         <div>Long Term Goal</div>
       </div>
     )

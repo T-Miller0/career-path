@@ -6,20 +6,28 @@ import classes from './SkillsForRole.css';
 
 const skillsForRole = (props) => (
   <div>
-    <h2>Top 3 most in-demand skills for this </h2>
-    <div><FontAwesomeIcon icon={faFire}
-      className={classes.Position} />
-      {props.skillsForRole[0].name}</div>
-      <div>{props.skillsForRole[0].description}</div>
+    <div className={classes.MostDesiredSkills}>
+      <h2>Top 3 most in-demand skills for this </h2>
+      <div><FontAwesomeIcon icon={faFire}
+        className={classes.Position} />
+        {props.skillsForRole[0].name}</div>
+        <div>{props.skillsForRole[0].description}</div>
 
-    <div><FontAwesomeIcon icon={faFire}
-      className={classes.Position} />
-      {props.skillsForRole[1].name}</div>
-      <div>{props.skillsForRole[1].description}</div>
-    <div><FontAwesomeIcon icon={faFire}
-      className={classes.Position} />
-      {props.skillsForRole[2].name}</div>
+      <div><FontAwesomeIcon icon={faFire}
+        className={classes.Position} />
+        {props.skillsForRole[1].name}</div>
+        <div>{props.skillsForRole[1].description}</div>
+      <div><FontAwesomeIcon icon={faFire}
+        className={classes.Position} />
+        {props.skillsForRole[2].name}</div>
       <div>{props.skillsForRole[2].description}</div>
+    </div>
+    <div>
+      <h2>Other skills typically needed for this role</h2>
+      {props.restOfSkills.map(skill => (
+        <div>{skill}</div>
+      ))}
+    </div>
 
   </div>
 );

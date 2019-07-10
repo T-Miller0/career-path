@@ -23,7 +23,8 @@ const shortTermGoal = (props) => (
       <FontAwesomeIcon icon={faClock} className={classes.Clock} />
       {props.details.details.experienceYears} years experience</div>
       <SkillsForRole
-        skillsForRole={props.skillsForRole}/>
+        skillsForRole={props.skillsForRole}
+        restOfSkills={props.restOfSkills}/>
   </div>
 );
 

@@ -6,3 +6,11 @@
   padding: 0.5em 0.6em;
   margin-right: 2%;
 }
+
+.MostDesiredSkills {
+  border:none;
+  border-top:1px dotted #f00;
+  border-bottom:1px dotted #f00;
+  width:100%;
+  padding: 10px
+}
