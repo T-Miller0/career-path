@@ -17,11 +17,20 @@ I would like to know the three most demand skills for the role
 As a user
 I would like to see the discriptions for those particular skills
 
-As a users
-I would like to know what the rest of the desired area
+As a user
+I would like to know what the rest of the desired skills are
 
 As a user
-I would like to see the details of my long-term goal 
+I would like to see the details of my long-term goal
+
+As a user
+I would like to see the skills needed for the role
+
+As a User
+I would like to know what programs there are to help me achieve my long-term goal
+
+As a User
+So I can look at the programs I would like a link to them
 
 ## Getting Started
 

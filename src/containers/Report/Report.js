@@ -63,6 +63,8 @@ export class Store extends Component {
     const longTermDesiredSkills = this.mostDesiredSkills(reportData.careerPath[1].selectedSkills, reportData.careerPath[1].details.allSkills)
     const longTermSkillsList = this.namesOfSkills(longTermDesiredSkills)
 
+    console.log(reportData.programs);
+
     return (
       <div>
         <h1>{reportData.firstName}'s career path</h1>
@@ -78,7 +80,8 @@ export class Store extends Component {
         <LongTermGoal
           details={reportData.careerPath[1]}
           salaryPercentage={longTermDiference}
-          skillsList={longTermSkillsList}/>
+          skillsList={longTermSkillsList}
+          programs={reportData.programs}/>
       </div>
     )
   }

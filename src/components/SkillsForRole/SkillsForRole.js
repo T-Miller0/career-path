@@ -9,16 +9,16 @@ const skillsForRole = (props) => (
   <div>
     <div className={classes.MostDesiredSkills}>
       <h2>Top 3 most in-demand skills for this </h2>
-      <div><FontAwesomeIcon icon={faFire}
+      <div className={classes.ThreeSkills}><FontAwesomeIcon icon={faFire}
         className={classes.Position} />
         {props.skillsForRole[0].name}</div>
         <div>{props.skillsForRole[0].description}</div>
 
-      <div><FontAwesomeIcon icon={faFire}
+      <div className={classes.ThreeSkills}><FontAwesomeIcon icon={faFire}
         className={classes.Position} />
         {props.skillsForRole[1].name}</div>
         <div>{props.skillsForRole[1].description}</div>
-      <div><FontAwesomeIcon icon={faFire}
+      <div className={classes.ThreeSkills}><FontAwesomeIcon icon={faFire}
         className={classes.Position} />
         {props.skillsForRole[2].name}</div>
       <div>{props.skillsForRole[2].description}</div>

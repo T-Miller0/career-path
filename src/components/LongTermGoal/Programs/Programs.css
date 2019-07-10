@@ -1,0 +1,8 @@
+.Link {
+  width: 500px;
+  height: 100px;
+  background: #ff6699;
+  -webkit-border-radius: 200px / 100px;
+  -moz-border-radius: 200px / 100px;
+  border-radius: 100px / 100px;
+}

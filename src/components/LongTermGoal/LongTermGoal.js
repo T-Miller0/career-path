@@ -4,12 +4,13 @@ import { faFlag, faDollarSign, faClock } from '@fortawesome/free-solid-svg-icons
 
 import classes from './LongTermGoal.css';
 import ListOfSkills from '../SkillsForRole/ListOfSkills/ListOfSkills';
+import Programs from './Programs/Programs';
 
 const longTermGoal = (props) => (
   <div className={classes.LongTermGoal}>
-    <h3><FontAwesomeIcon icon={faFlag}
+    <h2><FontAwesomeIcon icon={faFlag}
       className={classes.Position} />
-    {props.details.name}</h3>
+    {props.details.name}</h2>
     <div className={classes.Green}>
     <FontAwesomeIcon icon={faDollarSign}
       className={classes.IconGreen}/>
@@ -19,8 +20,13 @@ const longTermGoal = (props) => (
       <FontAwesomeIcon icon={faClock} className={classes.Clock} />
       {props.details.details.experienceYears} years experience</div>
     <h2>Skills typically needed for this role</h2>
+    <div className={classes.SkillsList}>
     <ListOfSkills
-      skillsList={props.skillsList}/>    
+      skillsList={props.skillsList}/>
+    </div>
+    <h3>Programs that will help you to become a {props.details.name}</h3>
+    <Programs
+      programs={props.programs} />
   </div>
 );
 
