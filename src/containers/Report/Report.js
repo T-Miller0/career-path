@@ -4,6 +4,7 @@ import './Report.css';
 import reportData from '../../data/report.json';
 import PersonalDetails from '../../components/PersonalDetails/PersonalDetails';
 import ShortTermGoal from '../../components/ShortTermGoal/ShortTermGoal';
+import LongTermGoal from '../../components/LongTermGoal/LongTermGoal';
 
 export class Store extends Component {
 
@@ -56,8 +57,10 @@ export class Store extends Component {
 
     const shortTermDesiredSkills = this.mostDesiredSkills(reportData.careerPath[0].selectedSkills, reportData.careerPath[0].details.allSkills)
     const shortTermDesiredSkillsNames = this.namesOfSkills(shortTermDesiredSkills).splice(3);
+    const shortTermDiference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[0].details.meanSalary)
 
-    const diference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[0].details.meanSalary)
+    const longTermDiference = this.salaryDifference(reportData.currentRoleDetails.salaryMean, reportData.careerPath[1].details.salaryMean)
+
     return (
       <div>
         <h1>{reportData.firstName}'s career path</h1>
@@ -66,10 +69,13 @@ export class Store extends Component {
         <h1>Your short-term goal</h1>
         <ShortTermGoal
           details={reportData.careerPath[0]}
-          salaryPercentage={diference }
+          salaryPercentage={shortTermDiference}
           skillsForRole={shortTermDesiredSkills}
           restOfSkills={shortTermDesiredSkillsNames}/>
-        <div>Long Term Goal</div>
+        <h1>Long Term Goal</h1>
+        <LongTermGoal
+          details={reportData.careerPath[1]}
+          salaryPercentage={longTermDiference}/>
       </div>
     )
   }

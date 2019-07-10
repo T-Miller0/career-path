@@ -14,7 +14,14 @@ I would like my short-term goal details to be displayed
 As a User
 I would like to know the three most demand skills for the role
 
-As a user I would like to see the discriptions for those particular skills
+As a user
+I would like to see the discriptions for those particular skills
+
+As a users
+I would like to know what the rest of the desired area
+
+As a user
+I would like to see the details of my long-term goal 
 
 ## Getting Started
 
